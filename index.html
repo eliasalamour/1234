@@ -1,0 +1,179 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر إلياس</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+        .card img {
+            border-radius: 8px;
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .card h3 {
+            color: #343a40;
+            margin: 10px 0;
+        }
+        .card p {
+            color: #6c757d;
+            margin: 10px 0;
+        }
+        .card button {
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        .card button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>متجر إلياس</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>منتج 1</h3>
+            <p>وصف قصير للمنتج 1</p>
+            <button onclick="location.href='checkout.html'">شراء الآن</button>
+        </div>
+        <div class="card">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>منتج 2</h3>
+            <p>وصف قصير للمنتج 2</p>
+            <button onclick="location.href='checkout.html'">شراء الآن</button>
+        </div>
+        <div class="card">
+            <img src="product3.jpg" alt="Product 3">
+            <h3>منتج 3</h3>
+            <p>وصف قصير للمنتج 3</p>
+            <button onclick="location.href='checkout.html'">شراء الآن</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الدفع</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .checkout-form {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .checkout-form h2 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        .checkout-form label {
+            color: #6c757d;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .checkout-form input[type="text"],
+        .checkout-form input[type="email"],
+        .checkout-form input[type="number"] {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+        }
+        .checkout-form button {
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+            width: 100%;
+        }
+        .checkout-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>صفحة الدفع</h1>
+    </header>
+    <div class="container">
+        <form class="checkout-form">
+            <h2>معلومات الدفع</h2>
+            <label for="name">الاسم الكامل</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" id="email" name="email" required>
+            <label for="address">العنوان</label>
+            <input type="text" id="address" name="address" required>
+            <label for="phone">رقم الهاتف</label>
+            <input type="text" id="phone" name="phone" required>
+            <label for="card-number">رقم البطاقة</label>
+            <input type="number" id="card-number" name="card-number" required>
+            <button type="submit">ادفع الآن</button>
+        </form>
+    </div>
+</body>
+</html>
+
